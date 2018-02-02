@@ -1,5 +1,5 @@
 ---
-- hosts: webservers
+- hosts: target_hosts
   remote_user: root
   gather_facts: False
   tasks:

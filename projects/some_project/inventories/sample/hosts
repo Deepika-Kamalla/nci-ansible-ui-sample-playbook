@@ -2,3 +2,4 @@
 [target_hosts]
 
 localhost
+ansible

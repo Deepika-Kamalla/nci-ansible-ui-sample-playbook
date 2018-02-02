@@ -28,7 +28,4 @@
     register: gitout
   - debug: var=gitout.stdout
   
-  - name: copying files
-    copy:
-      content: "{{gitout}}"
-      dest: /root/gitout2.txt
+

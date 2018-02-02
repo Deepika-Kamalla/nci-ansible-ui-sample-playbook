@@ -1,0 +1,30 @@
+---
+- hosts: target_hosts
+  remote_user: root
+  gather_facts: False
+  tasks:
+  - name: running uptime
+    command: uptime
+    register: gitout
+  - debug: var=gitout.stdout
+  
+  - name: on date
+    command: date
+    register: gitout
+  - debug: var=gitout.stdout
+  
+  - name: on server
+    command: hostname
+    register: gitout
+  - debug: var=gitout.stdout
+  
+  - name: IP address
+    command: hostname -i
+    register: gitout
+  - debug: var=gitout.stdout
+  
+  - name: disk space
+    command: df -h
+    register: gitout
+  - debug: var=gitout.stdout
+ 
